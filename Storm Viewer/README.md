@@ -3,6 +3,6 @@
 Viewer app and learning key concepts.
 
 
-# Concepts studied
+## Concepts studied
 
 Constants and variables, UITableView, UIImageView, FileManager, storyboards
