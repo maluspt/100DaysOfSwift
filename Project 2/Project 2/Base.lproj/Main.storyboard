@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mA-v1-kgd">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD0-UF-wkj">
+                                <rect key="frame" x="107" y="200" width="200" height="100"/>
+                                <state key="normal" image="poland"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihT-4t-XxB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K1-84-80n">
+                                <rect key="frame" x="107" y="385" width="200" height="100"/>
+                                <state key="normal" image="poland"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YPr-Ft-LMH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urp-FF-j2O">
+                                <rect key="frame" x="107" y="580" width="200" height="100"/>
+                                <state key="normal" image="poland"/>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFO-YP-S5M"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:  0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-J6-PJ5">
+                                <rect key="frame" x="155" y="100" width="104" height="72"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4K1-84-80n" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="213" id="1Uo-5a-Oxx"/>
+                            <constraint firstItem="urp-FF-j2O" firstAttribute="centerX" secondItem="gD0-UF-wkj" secondAttribute="centerX" id="2j1-c5-Cam"/>
+                            <constraint firstItem="urp-FF-j2O" firstAttribute="top" secondItem="4K1-84-80n" secondAttribute="bottom" constant="121" id="5kW-sB-mP5"/>
+                            <constraint firstItem="gD0-UF-wkj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="77r-5F-9cc"/>
+                            <constraint firstItem="4K1-84-80n" firstAttribute="centerX" secondItem="gD0-UF-wkj" secondAttribute="centerX" id="8Me-Ka-N4z"/>
+                            <constraint firstItem="4K1-84-80n" firstAttribute="top" secondItem="gD0-UF-wkj" secondAttribute="bottom" constant="85" id="F1b-p1-ozf"/>
+                            <constraint firstItem="urp-FF-j2O" firstAttribute="centerX" secondItem="4K1-84-80n" secondAttribute="centerX" id="G3t-nR-wHx"/>
+                            <constraint firstItem="gD0-UF-wkj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="k1X-av-qIl"/>
+                            <constraint firstItem="ZTl-J6-PJ5" firstAttribute="centerX" secondItem="4K1-84-80n" secondAttribute="centerX" id="kcx-bW-Cgk"/>
+                            <constraint firstItem="gD0-UF-wkj" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="28" id="m2R-Tf-l7D"/>
+                            <constraint firstItem="urp-FF-j2O" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="434" id="mTf-56-ZBC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bQN-cy-YJ8"/>
+                    <connections>
+                        <outlet property="Score" destination="ZTl-J6-PJ5" id="0ml-Ob-NIR"/>
+                        <outlet property="button1" destination="gD0-UF-wkj" id="elp-wl-lQ7"/>
+                        <outlet property="button2" destination="4K1-84-80n" id="nNa-zs-zb9"/>
+                        <outlet property="button3" destination="urp-FF-j2O" id="IJU-Ke-oGx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147.8260869565217" y="758.70535714285711"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="svd-Sb-Af4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2mA-v1-kgd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EDa-V4-vo1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="P58-0S-JUw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ios-XQ-Vr2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="759.375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="poland" width="200" height="100"/>
+    </resources>
+</document>
