@@ -1,6 +1,6 @@
 # Storm Viewer
 
-Viewer app and learning key concepts.
+Photo viewer app.
 
 
 ## Studied concepts
