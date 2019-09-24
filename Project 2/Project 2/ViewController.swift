@@ -37,6 +37,9 @@ class ViewController: UIViewController {
 
         askQuestion()
         
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
+        
 
 }
     func askQuestion(action: UIAlertAction! = nil) {
@@ -106,6 +109,15 @@ class ViewController: UIViewController {
     
         
         present(alert, animated: true)
+    }
+    
+    
+    @objc func showScore() {
+        let ac = UIAlertController(title: "Score", message: String(score), preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        
+        present(ac, animated: true)
     }
     
     
