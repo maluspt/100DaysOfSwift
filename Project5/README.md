@@ -1,4 +1,4 @@
-## Word Scramble
+# Word Scramble
 
 Anagram game
 
