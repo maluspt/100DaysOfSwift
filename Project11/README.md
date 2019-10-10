@@ -1,8 +1,8 @@
-## Pachinko game
+# Pachinko game
 
 A 2D game made using SpriteKit
 
-# Studied concepts
+## Studied concepts
 
 - SKSpriteNode
 - SKPhysicsBody
