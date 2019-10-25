@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     
     let maxQuestions = 10
     
+    var highestScore = -1
+    var highestScoreKey = "highscore"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,12 +40,12 @@ class ViewController: UIViewController {
 
         askQuestion()
         
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Score", style: .plain, target: self, action: #selector(showScore))
-        
 
 }
     func askQuestion(action: UIAlertAction! = nil) {
+        
+        
+        
         currentQuestion += 1
         
         if currentQuestion > maxQuestions {
@@ -57,14 +60,26 @@ class ViewController: UIViewController {
         button1.setImage(UIImage(named: countries[0]), for: .normal)
         button2.setImage(UIImage(named: countries[1]), for: .normal)
         button3.setImage(UIImage(named: countries[2]), for: .normal)
-        
         correctAnswer = Int.random(in: 0...2)
         title = countries[correctAnswer].uppercased()
+        
        
         
 }
     
+    @IBAction func buttonTouched(_ sender: UIButton) {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [], animations: {
+            sender.transform = CGAffineTransform(scaleX: 0.7, y: 0.7)
+            
+        })
+        
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 5, options: [], animations: {
+            sender.transform = .identity
+        })
+    }
+    
     @IBAction func buttonTapped(_ sender: UIButton) {
+        
         var title: String
         var message: String
         
@@ -79,10 +94,9 @@ class ViewController: UIViewController {
             
             score -= 1
             Score.text = "Score: \(score)"
-            
-            
-            
-        }
+
+            }
+        
          // alert pop-up
         let ac = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
@@ -93,10 +107,26 @@ class ViewController: UIViewController {
     
     func showResult() {
         
-        //alert
+        
+        
+        
+        var saveHighScore = false
+        if score > highestScore {
+            let alert = UIAlertController(title: "New High Score!", message: "New high score! Previus high score: \(highestScore)", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default))
+            highestScore = score
+            saveHighScore = true
+            present(alert, animated: true)
+            
+        }
+        
+        if saveHighScore {
+            performSelector(inBackground: #selector(saveHighestScore), with: nil)
+        }
         
         let alert = UIAlertController(title: "Game Over!", message: "Your score was \(score) out of \(maxQuestions)", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Play again", style: .default, handler: askQuestion))
+        present(alert, animated: true)
         
         
          // "restarts" the game
@@ -108,16 +138,12 @@ class ViewController: UIViewController {
         
     
         
-        present(alert, animated: true)
+        
     }
     
-    
-    @objc func showScore() {
-        let ac = UIAlertController(title: "Score", message: String(score), preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-        
-        present(ac, animated: true)
+    @objc func saveHighestScore() {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(highestScore, forKey: highestScoreKey)
     }
     
     

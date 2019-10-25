@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mA-v1-kgd">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mA-v1-kgd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,27 +18,42 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gD0-UF-wkj">
                                 <rect key="frame" x="107" y="200" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="gD0-UF-wkj" secondAttribute="height" multiplier="2:1" id="Sy0-ZA-lub"/>
+                                </constraints>
                                 <state key="normal" image="poland"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihT-4t-XxB"/>
+                                    <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PWk-Zm-Lyb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K1-84-80n">
                                 <rect key="frame" x="107" y="385" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="4K1-84-80n" secondAttribute="height" multiplier="2:1" id="XMJ-WL-YAc"/>
+                                </constraints>
                                 <state key="normal" image="poland"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YPr-Ft-LMH"/>
+                                    <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vLY-gF-ibl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urp-FF-j2O">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="urp-FF-j2O">
                                 <rect key="frame" x="107" y="580" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="urp-FF-j2O" secondAttribute="height" multiplier="2:1" id="raf-tn-mO6"/>
+                                </constraints>
                                 <state key="normal" image="poland"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cFO-YP-S5M"/>
+                                    <action selector="buttonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHj-pk-zDB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Score:  0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-J6-PJ5">
-                                <rect key="frame" x="155" y="100" width="104" height="72"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-J6-PJ5">
+                                <rect key="frame" x="155" y="120" width="104" height="72"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="72" id="YA6-sW-HdI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -49,17 +62,18 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4K1-84-80n" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="213" id="1Uo-5a-Oxx"/>
-                            <constraint firstItem="urp-FF-j2O" firstAttribute="centerX" secondItem="gD0-UF-wkj" secondAttribute="centerX" id="2j1-c5-Cam"/>
-                            <constraint firstItem="urp-FF-j2O" firstAttribute="top" secondItem="4K1-84-80n" secondAttribute="bottom" constant="121" id="5kW-sB-mP5"/>
-                            <constraint firstItem="gD0-UF-wkj" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="77r-5F-9cc"/>
-                            <constraint firstItem="4K1-84-80n" firstAttribute="centerX" secondItem="gD0-UF-wkj" secondAttribute="centerX" id="8Me-Ka-N4z"/>
-                            <constraint firstItem="4K1-84-80n" firstAttribute="top" secondItem="gD0-UF-wkj" secondAttribute="bottom" constant="85" id="F1b-p1-ozf"/>
-                            <constraint firstItem="urp-FF-j2O" firstAttribute="centerX" secondItem="4K1-84-80n" secondAttribute="centerX" id="G3t-nR-wHx"/>
-                            <constraint firstItem="gD0-UF-wkj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="112" id="k1X-av-qIl"/>
-                            <constraint firstItem="ZTl-J6-PJ5" firstAttribute="centerX" secondItem="4K1-84-80n" secondAttribute="centerX" id="kcx-bW-Cgk"/>
-                            <constraint firstItem="gD0-UF-wkj" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="28" id="m2R-Tf-l7D"/>
-                            <constraint firstItem="urp-FF-j2O" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="434" id="mTf-56-ZBC"/>
+                            <constraint firstItem="urp-FF-j2O" firstAttribute="height" secondItem="4K1-84-80n" secondAttribute="height" id="405-Qw-U7v"/>
+                            <constraint firstItem="urp-FF-j2O" firstAttribute="top" secondItem="4K1-84-80n" secondAttribute="bottom" constant="95" id="GF7-yT-BIG"/>
+                            <constraint firstItem="ZTl-J6-PJ5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="HSa-J2-dj0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="urp-FF-j2O" secondAttribute="bottom" constant="150" id="IU9-fz-HvQ"/>
+                            <constraint firstItem="ZTl-J6-PJ5" firstAttribute="centerX" secondItem="gD0-UF-wkj" secondAttribute="centerX" id="bLX-eq-AkB"/>
+                            <constraint firstItem="gD0-UF-wkj" firstAttribute="leading" secondItem="4K1-84-80n" secondAttribute="leading" id="gBa-Xe-Uj0"/>
+                            <constraint firstItem="4K1-84-80n" firstAttribute="leading" secondItem="urp-FF-j2O" secondAttribute="leading" id="glU-Ns-FIe"/>
+                            <constraint firstItem="ZTl-J6-PJ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="155" id="hl9-c8-RBL"/>
+                            <constraint firstItem="4K1-84-80n" firstAttribute="top" secondItem="gD0-UF-wkj" secondAttribute="bottom" constant="85" id="j1K-v9-a05"/>
+                            <constraint firstItem="4K1-84-80n" firstAttribute="height" secondItem="gD0-UF-wkj" secondAttribute="height" id="jNc-Vk-2zh"/>
+                            <constraint firstItem="gD0-UF-wkj" firstAttribute="top" secondItem="ZTl-J6-PJ5" secondAttribute="bottom" constant="8" id="wgC-pl-k5z"/>
+                            <constraint firstItem="ZTl-J6-PJ5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zpN-iI-SAj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
