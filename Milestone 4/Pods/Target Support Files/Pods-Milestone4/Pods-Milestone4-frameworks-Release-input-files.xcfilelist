@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-Milestone4/Pods-Milestone4-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
+${BUILT_PRODUCTS_DIR}/SDWebImageSVGCoder/SDWebImageSVGCoder.framework
+${BUILT_PRODUCTS_DIR}/SVGKit/SVGKit.framework
