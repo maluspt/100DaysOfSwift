@@ -1,6 +1,6 @@
 # Space Race
 
-Simple 2D survival game.
+Simple 2D survival game
 
 ## Studied concepts
 
