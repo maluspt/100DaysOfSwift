@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+# platform :ios, '9.0'
 
 target 'Milestone4' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,8 +7,7 @@ target 'Milestone4' do
 
   # Pods for Milestone4
 
-pod 'Alamofire', '~> 4.7'
-pod 'SDWebImage', '~> 5.0'
-pod 'SDWebImageSVGCoder'
+pod 'Alamofire', '~> 5.0.0-rc.3'
+
 
 end

@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SVGKit
+
 
 class DetailViewController: UIViewController {
     var country: Country?
